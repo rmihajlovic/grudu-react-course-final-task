@@ -1,0 +1,6 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 40ch;
+  gap: 16px;
+}
