@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../logo/Logo";
 import UserAvatar from "../user-avatar/UserAvatar";
 
@@ -7,7 +8,10 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
+
         <div className={styles.avatar}>
           <UserAvatar name="Peter Griffin" />
         </div>

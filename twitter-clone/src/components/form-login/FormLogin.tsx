@@ -4,7 +4,7 @@ import * as EmailValidator from "email-validator";
 import FormInput from "../form-input/FormInput";
 import Button from "../button/Button";
 
-import styles from "./FormSignup.module.css";
+import styles from "./FormLogin.module.css";
 
 const fieldsConfig = [
   {
@@ -23,27 +23,9 @@ const fieldsConfig = [
         ? null
         : "Password must be longer than 8 and shorter then 256 characters",
   },
-  // {
-  //   name: "username",
-  //   label: "username",
-  //   type: "text",
-  //   validate: (value: string) =>
-  //     value.length >= 4 && value.length <= 256
-  //       ? null
-  //       : "Username must be longer than 4 and shorter then 256 characters",
-  // },
-  {
-    name: "name",
-    label: "full name",
-    type: "text",
-    validate: (value: string) =>
-      value.length >= 1 && value.length <= 512
-        ? null
-        : "Full name must be longer than 1 and shorter then 512 characters",
-  },
 ];
 
-export default function FormSignup() {
+export default function FormLogin() {
   const [fieldValidations, setFieldValidations] = useState<
     Record<string, boolean>
   >({});
@@ -61,7 +43,6 @@ export default function FormSignup() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (isFormValid) {
-    } else {
     }
   }
 
@@ -77,7 +58,7 @@ export default function FormSignup() {
           onFieldStateChange={handleStateChange}
         />
       ))}
-      <Button classNames={styles.submitButton}>Sign Up</Button>
+      <Button classNames={styles.submitButton}>Login</Button>
     </form>
   );
 }

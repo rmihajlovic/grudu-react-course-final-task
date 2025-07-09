@@ -6,11 +6,23 @@ import "./css/variables.css";
 import Root from "./components/root/Root";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import Signup from "./pages/SignupPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    children: [
+      {
+        path: "login",
+        element: <LoginPage />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+    ],
   },
 ]);
 
